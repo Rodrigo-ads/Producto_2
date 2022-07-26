@@ -1,0 +1,6 @@
+C:\Users\julio\Documents\Producto Memo\Producto_2\ClassEntidad\bin\Debug\ClassEntidad.dll
+C:\Users\julio\Documents\Producto Memo\Producto_2\ClassEntidad\bin\Debug\ClassEntidad.pdb
+C:\Users\julio\Documents\Producto Memo\Producto_2\ClassEntidad\obj\Debug\ClassEntidad.csproj.AssemblyReference.cache
+C:\Users\julio\Documents\Producto Memo\Producto_2\ClassEntidad\obj\Debug\ClassEntidad.csproj.CoreCompileInputs.cache
+C:\Users\julio\Documents\Producto Memo\Producto_2\ClassEntidad\obj\Debug\ClassEntidad.dll
+C:\Users\julio\Documents\Producto Memo\Producto_2\ClassEntidad\obj\Debug\ClassEntidad.pdb

@@ -1,0 +1,6 @@
+C:\Users\julio\Documents\Producto Memo\Producto_2\ClassDAL\bin\Debug\ClassDAL.dll
+C:\Users\julio\Documents\Producto Memo\Producto_2\ClassDAL\bin\Debug\ClassDAL.pdb
+C:\Users\julio\Documents\Producto Memo\Producto_2\ClassDAL\obj\Debug\ClassDAL.csproj.AssemblyReference.cache
+C:\Users\julio\Documents\Producto Memo\Producto_2\ClassDAL\obj\Debug\ClassDAL.csproj.CoreCompileInputs.cache
+C:\Users\julio\Documents\Producto Memo\Producto_2\ClassDAL\obj\Debug\ClassDAL.dll
+C:\Users\julio\Documents\Producto Memo\Producto_2\ClassDAL\obj\Debug\ClassDAL.pdb

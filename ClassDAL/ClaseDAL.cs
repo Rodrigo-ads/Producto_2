@@ -61,6 +61,247 @@ namespace ClassDAL
             conexion.Close();
             return respuesta;
         }
+
+        public string InsertaCarrera(Carrera carrera)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.Parameters.AddWithValue("@nomCarrera", carrera.nombreCarrera);
+            com.CommandText = "insert into Carrera values(@nomCarrera);";
+            com.ExecuteNonQuery();
+            respuesta = "Se creó una nueva carrera";
+            conexion.Close();
+            return respuesta;
+        }
+
+        public string InsertaProgramaEducativo(ProgramaEducativo programaEducativo)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.Parameters.AddWithValue("@ProgramaED", programaEducativo.ProgramaEd);
+            com.Parameters.AddWithValue("@F_Carrera", programaEducativo.F_Carrera);
+            com.Parameters.AddWithValue("@Extra", programaEducativo.Extra);
+            com.CommandText = "insert into ProgramaEducativo values(@ProgramaED, @F_Carrera, @Extra);";
+            com.ExecuteNonQuery();
+            respuesta = "Se creó un nuevo programa educativo";
+            conexion.Close();
+            return respuesta;
+        }
+
+        public string InsertaGrupo(Grupo grupo)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.Parameters.AddWithValue("@Grado", grupo.Grado);
+            com.Parameters.AddWithValue("@Letra", grupo.Letra);
+            com.Parameters.AddWithValue("@Extra", grupo.extra);
+            com.CommandText = "insert into ProgramaEducativo values(@ProgramaED, @F_Carrera, @Extra);";
+            com.ExecuteNonQuery();
+            respuesta = "Se creó un nuevo grupo";
+            conexion.Close();
+            return respuesta;
+        }
+
+        public string InsertaGrupoCuatrimestre(GrupoCuatrimestre grupoCuatrimestre)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.Parameters.AddWithValue("@F_ProgEd", grupoCuatrimestre.F_prod);
+            com.Parameters.AddWithValue("@F_Grupo", grupoCuatrimestre.F_Grupo);
+            com.Parameters.AddWithValue("@F_Cuatri", grupoCuatrimestre.F_Cuatri);
+            com.Parameters.AddWithValue("@Turno", grupoCuatrimestre.Turno);
+            com.Parameters.AddWithValue("@Modalidad", grupoCuatrimestre.Modalidad);
+            com.Parameters.AddWithValue("@Extra", grupoCuatrimestre.Extra);
+            com.CommandText = "insert into GrupoCuatrimestre values(@F_ProgEd, @F_Grupo, @F_Cuatri, @Turno, @Modalidad, @Extra);";
+            com.ExecuteNonQuery();
+            respuesta = "Se creó un nuevo grupoCuatrimestre";
+            conexion.Close();
+            return respuesta;
+        }
+
+        public string InsertaCuatrimestre(Cuatrimestre cuatrimestre)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.Parameters.AddWithValue("@Periodo", cuatrimestre.Periodo);
+            com.Parameters.AddWithValue("@Anio", cuatrimestre.Anio);
+            com.Parameters.AddWithValue("@Inicio", cuatrimestre.Inicio);
+            com.Parameters.AddWithValue("@Fin", cuatrimestre.fin);
+            com.Parameters.AddWithValue("@Extra", cuatrimestre.Extra);
+            com.CommandText = "insert into Cuatrimestre values(@Periodo, @Anio, @Inicio, @Fin, @Extra);";
+            com.ExecuteNonQuery();
+            respuesta = "Se creó un nuevo Cuatrimestre";
+            conexion.Close();
+            return respuesta;
+        }
+        public string InsertaAlumnoGrupo(AlumnoGrupo alumnoGrupo)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.Parameters.AddWithValue("@F_Alumn", alumnoGrupo.f_alumn);
+            com.Parameters.AddWithValue("@F_GruCuat", alumnoGrupo.f_grucuat);
+            com.Parameters.AddWithValue("@Extra", alumnoGrupo.extra);
+            com.Parameters.AddWithValue("@Extra2", alumnoGrupo.extra2);
+            com.CommandText = "insert into AlumnoGrupo values(@F_Alumn, @F_GruCuat, @Extra, @Extra2);";
+            com.ExecuteNonQuery();
+            respuesta = "Se creó un nuevo AlumnoGrupo";
+            conexion.Close();
+            return respuesta;
+        }
+        public string InsertaEstadoCivil(EstadoCivil estadoCivil)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.Parameters.AddWithValue("@Estado", estadoCivil.Estado);
+            com.Parameters.AddWithValue("@Extra", estadoCivil.Extra);
+            com.CommandText = "insert into EstadoCivil values(@Estado, @Extra);";
+            com.ExecuteNonQuery();
+            respuesta = "Se creó un nuevo Estado Civil";
+            conexion.Close();
+            return respuesta;
+        }
+        public string InsertaPositivoProfe(PositivoProfe positivoProfe)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.Parameters.AddWithValue("@FechaConfirmado", positivoProfe.FechaConfirmado);
+            com.Parameters.AddWithValue("@Comprobacion", positivoProfe.Comprobacion);
+            com.Parameters.AddWithValue("@Antecedentes", positivoProfe.Antecedentes);
+            com.Parameters.AddWithValue("@Riesgo", positivoProfe.Riesgo);
+            com.Parameters.AddWithValue("@NumContai", positivoProfe.NumContaio);
+            com.Parameters.AddWithValue("@Extra", positivoProfe.Extra);
+            com.Parameters.AddWithValue("@F_Profe", positivoProfe.F_Profe);
+            com.Parameters.AddWithValue("@imagen", positivoProfe.Imagen);
+            com.Parameters.AddWithValue("@discapacidad", positivoProfe.Discapacidad);
+            com.CommandText = "insert into PositivoProfe values(@FechaConfirmado, @Comprobacion, @Antecedentes, @Riesgo, @NumContai, @Extra, @F_Profe, @imagen, @discapacidad);";
+            com.ExecuteNonQuery();
+            respuesta = "Se creó un nuevo Positivo Profe";
+            conexion.Close();
+            return respuesta;
+        }
+        public string InsertaSeguimientoPro(SeguimientoPRO seguimientoPRO)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.Parameters.AddWithValue("@F_positivoProfe", seguimientoPRO.F_positivoProfe);
+            com.Parameters.AddWithValue("@F_medico", seguimientoPRO.F_medico);
+            com.Parameters.AddWithValue("@Fecha", seguimientoPRO.Fecha);
+            com.Parameters.AddWithValue("@Form_comunica", seguimientoPRO.Form_Comunica);
+            com.Parameters.AddWithValue("@Reporte", seguimientoPRO.Reporte);
+            com.Parameters.AddWithValue("@Entrevista", seguimientoPRO.Entrevista);
+            com.Parameters.AddWithValue("@Extra", seguimientoPRO.Extra);
+            com.Parameters.AddWithValue("@imagen", seguimientoPRO.Imagen);
+            com.CommandText = "insert into SeguimientoPRO values(@F_positivoProfe, @F_medico, @Fecha, @Form_comunica, @Reporte, @Entrevista, @Extra, @imagen);";
+            com.ExecuteNonQuery();
+            respuesta = "Se creó un nuevo Seguimiento PRO";
+            conexion.Close();
+            return respuesta;
+        }
+        public string InsertaProfeGrupo(ProfeGrupo profeGrupo)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.Parameters.AddWithValue("@F_Profe", profeGrupo.F_Profe);
+            com.Parameters.AddWithValue("@F_GruCuat", profeGrupo.F_GruCuat);
+            com.Parameters.AddWithValue("@Extra", profeGrupo.Extra);
+            com.Parameters.AddWithValue("@Extra2", profeGrupo.Extra2);
+            com.CommandText = "insert into ProfeGRupo values(@F_Profe, @F_GruCuat, @Extra, @Extra2);";
+            com.ExecuteNonQuery();
+            respuesta = "Se creó un nuevo ProfeGrupo";
+            conexion.Close();
+            return respuesta;
+        }
+        public string InsertaMedico(Medico medico)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.Parameters.AddWithValue("@Nombre", medico.Nombre);
+            com.Parameters.AddWithValue("@App", medico.App);
+            com.Parameters.AddWithValue("@Apm", medico.Apm);
+            com.Parameters.AddWithValue("@Telefono", medico.Telefono);
+            com.Parameters.AddWithValue("@correo", medico.correo);
+            com.Parameters.AddWithValue("@horario", medico.horario);
+            com.Parameters.AddWithValue("@especialidad", medico.especialidad);
+            com.Parameters.AddWithValue("@extra", medico.extra);
+            com.CommandText = "insert into Medico values(@Nombre, @App, @Apm, @Telefono, @correo, @horario, @especialidad, @extra);";
+            com.ExecuteNonQuery();
+            respuesta = "Se creó un nuevo Medico";
+            conexion.Close();
+            return respuesta;
+        }
+        public string InsertaSeguimientoAl(SeguimientoAL seguimientoAL)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.Parameters.AddWithValue("@F_PositivoAL", seguimientoAL.F_PositivoAL);
+            com.Parameters.AddWithValue("@F_medico", seguimientoAL.F_medico);
+            com.Parameters.AddWithValue("@Fecha", seguimientoAL.Fecha);
+            com.Parameters.AddWithValue("@Form_Comunica", seguimientoAL.Form_Comunica);
+            com.Parameters.AddWithValue("@Reporte", seguimientoAL.Reporte);
+            com.Parameters.AddWithValue("@Entrevista", seguimientoAL.Entrevista);
+            com.Parameters.AddWithValue("@Extra", seguimientoAL.Extra);
+            com.CommandText = "insert into SeguimientoAL values(@F_PositivoAL, @F_medico, @Fecha, @Form_Comunica, @Reporte, @Entrevista, @Extra);";
+            com.ExecuteNonQuery();
+            respuesta = "Se creó un nuevo SeguimientoAL";
+            conexion.Close();
+            return respuesta;
+        }
+        public string InsertaPositivoAlumno(PositivoAlumno positivoAlumno)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.Parameters.AddWithValue("@FechaConfirmado", positivoAlumno.FechaConfirmado);
+            com.Parameters.AddWithValue("@Comprobacion", positivoAlumno.Comprobacion);
+            com.Parameters.AddWithValue("@Antecedentes", positivoAlumno.Antecedentes);
+            com.Parameters.AddWithValue("@Riesgo", positivoAlumno.Riesgo);
+            com.Parameters.AddWithValue("@NumContagio", positivoAlumno.NumContagio);
+            com.Parameters.AddWithValue("@Extra", positivoAlumno.Extra);
+            com.Parameters.AddWithValue("@F_Alumno", positivoAlumno.F_Alumno);
+            com.CommandText = "insert into PositivoAlumno values(@FechaConfirmado, @Comprobacion, @Antecedentes, @Riesgo, @NumContagio, @Extra, @F_Alumno);";
+            com.ExecuteNonQuery();
+            respuesta = "Se creó un nuevo PositivoAlumno";
+            conexion.Close();
+            return respuesta;
+        }
         public SqlDataReader Select(string table)
         {
             SqlConnection conexion = new SqlConnection(Cadena);

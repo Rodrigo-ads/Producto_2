@@ -16,5 +16,7 @@ namespace ClassEntidad
         public int NumContaio { set; get; }
         public string Extra { set; get; }
         public int F_Profe { set; get; }
+        public string Imagen { set; get; }
+        public int Discapacidad { set; get; }
     }
 }

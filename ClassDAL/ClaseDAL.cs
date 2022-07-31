@@ -61,5 +61,30 @@ namespace ClassDAL
             conexion.Close();
             return respuesta;
         }
-    }
+        public SqlDataReader Select(string table)
+        {
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlDataReader reader;
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.CommandText = "select * from " + table;
+            reader = com.ExecuteReader();
+            return reader;
+        }
+        public string Delete(string table, int id)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.Parameters.AddWithValue("@id", id);
+            com.CommandText = "delete from " + table + " where id = @id";
+            com.ExecuteNonQuery();
+            respuesta = "Se eliminó un registro";
+            conexion.Close();
+            return respuesta;
+        }
+    }   
 }

@@ -19,10 +19,18 @@ namespace ClassNegocio
         {
             return obj.InsertaAlumno(alumno);
         }
-
         public string crearProfesor(Profesor profesor)
         {
             return obj.InsertaProfe(profesor);
+        }
+        public SqlDataReader ObtenerTablas(string tabla)
+        {
+            return obj.Select(tabla);
+
+        }
+        public string EliminarRegistro(string table, int id)
+        {
+            return obj.Delete(table, id);
         }
     }
 }

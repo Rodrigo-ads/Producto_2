@@ -4,3 +4,9 @@ C:\Users\julio\Documents\Producto Memo\Producto_2\ClassEntidad\obj\Debug\ClassEn
 C:\Users\julio\Documents\Producto Memo\Producto_2\ClassEntidad\obj\Debug\ClassEntidad.csproj.CoreCompileInputs.cache
 C:\Users\julio\Documents\Producto Memo\Producto_2\ClassEntidad\obj\Debug\ClassEntidad.dll
 C:\Users\julio\Documents\Producto Memo\Producto_2\ClassEntidad\obj\Debug\ClassEntidad.pdb
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\ClassEntidad\bin\Debug\ClassEntidad.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\ClassEntidad\bin\Debug\ClassEntidad.pdb
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\ClassEntidad\obj\Debug\ClassEntidad.csproj.AssemblyReference.cache
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\ClassEntidad\obj\Debug\ClassEntidad.csproj.CoreCompileInputs.cache
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\ClassEntidad\obj\Debug\ClassEntidad.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\ClassEntidad\obj\Debug\ClassEntidad.pdb

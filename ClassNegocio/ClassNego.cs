@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClassDAL;
+using ClassEntidad;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
@@ -12,22 +13,16 @@ namespace ClassNegocio
 {
     public class ClassNego
     {
-        ClaseDAL obj = null;
+        ClaseDAL obj = new ClaseDAL();
 
-        public string AbrirCadenaConexion()
+        public string crearAlumno(Alumno alumno)
         {
-            return obj.AbrirConexion();
+            return obj.InsertaAlumno(alumno);
         }
 
-        public void CerrarCadenaConexion()
+        public string crearProfesor(Profesor profesor)
         {
-            obj.CerrarConexion();
-        }
-
-        public string consultarProfes()
-        {
-            string consulta = "SELECT * FROM PROFESOR";
-            return consulta;
+            return obj.InsertaProfe(profesor);
         }
     }
 }

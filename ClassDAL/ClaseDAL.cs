@@ -5,88 +5,61 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using ClassEntidad;
+using System.Configuration;
 
 namespace ClassDAL
 {
     public class ClaseDAL
     {
-        private string cadConexion;
-        private SqlConnection conexionGlobal = null;
-
-        public ClaseDAL(string cadenaDB)
+        private string Cadena;
+        public ClaseDAL()
         {
-            cadConexion = cadenaDB;
-            conexionGlobal = new SqlConnection();
+            Cadena = ConfigurationManager.ConnectionStrings["bdCovid"].ConnectionString;
+        }
+        public string InsertaAlumno(Alumno alumno)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.Parameters.AddWithValue("@Matricula", alumno.Matricula);
+            com.Parameters.AddWithValue("@Nombre", alumno.Nombre);
+            com.Parameters.AddWithValue("@Appat", alumno.Ap_pat);
+            com.Parameters.AddWithValue("@Apmat", alumno.Ap_mat);
+            com.Parameters.AddWithValue("@Genero", alumno.Genero);
+            com.Parameters.AddWithValue("@Correo", alumno.Correo);
+            com.Parameters.AddWithValue("@Celular", alumno.Celular);
+            com.Parameters.AddWithValue("@F_EdoCivl", alumno.f_edoCivil);
+            com.CommandText = "insert into Alumno values (@Matricula, @Nombre, @Appat, @Apmat, @Genero, @Correo, @Celular, @F_EdoCivl)";
+            com.ExecuteNonQuery();
+            respuesta = "Se creó un nuevo alumno";
+            conexion.Close();
+            return respuesta;
         }
 
-        public string AbrirConexion()
+        public string InsertaProfe(Profesor profesor)
         {
-            string msj = "";
-            conexionGlobal.ConnectionString = cadConexion;
-            try
-            {
-                conexionGlobal.Open();
-                msj = "Conexión abierta CORRECTAMENTE";
-            }
-            catch (Exception f)
-            {
-                conexionGlobal = null;
-                msj = "Error " + f.Message;
-            }
-            return msj;
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.Parameters.AddWithValue("@RegistroE", profesor.RegistroEmpleado);
+            com.Parameters.AddWithValue("@Nombre", profesor.Nombre);
+            com.Parameters.AddWithValue("@Appat", profesor.Ap_pat);
+            com.Parameters.AddWithValue("@Apmat", profesor.Ap_Mat);
+            com.Parameters.AddWithValue("@Genero", profesor.Genero);
+            com.Parameters.AddWithValue("@Categoria", profesor.Categoria);
+            com.Parameters.AddWithValue("@Correo", profesor.Correo);
+            com.Parameters.AddWithValue("@Celular", profesor.Celular);
+            com.Parameters.AddWithValue("@F_EdoCivil", profesor.F_EdoCivil);
+            com.CommandText = "insert into Profesor values (@RegistroE, @Nombre, @Appat, @Apmat, @Genero, @Categoria, @Correo, @Celular, @F_EdoCivil)";
+            com.ExecuteNonQuery();
+            respuesta = "Se creó un nuevo profesor";
+            conexion.Close();
+            return respuesta;
         }
-
-        public void CerrarConexion()
-        {
-            if(conexionGlobal != null)
-            {
-                if(conexionGlobal.State == ConnectionState.Open)
-                {
-                    conexionGlobal.Close();
-                    conexionGlobal.Dispose();
-                }
-            }
-        }
-
-        public DataSet ConsultaDS(string querySQL, ref string msj)
-        {
-            SqlCommand carrito = null;
-            SqlDataAdapter trailer = null;
-            DataSet DS_salida = new DataSet();
-
-            msj = AbrirConexion();
-
-            if (conexionGlobal == null)
-            {
-                msj = "No hay conexion a la BD";
-                DS_salida = null;
-            }
-            else
-            {
-                carrito = new SqlCommand();
-                carrito.CommandText = querySQL;
-                carrito.Connection = conexionGlobal;
-
-                trailer = new SqlDataAdapter();
-                trailer.SelectCommand = carrito;
-
-                try
-                {
-                    trailer.Fill(DS_salida, "Consulta1");
-                    msj = "Consulta Correcta en DataSet";
-                }
-                catch (Exception a)
-                {
-                    DS_salida = null;
-                    msj = "Error!" + a.Message;
-                }
-                conexionGlobal.Close();
-                conexionGlobal.Dispose();
-            }
-            return DS_salida;
-        }
-       
-
-
     }
 }

@@ -32,5 +32,25 @@ namespace ClassNegocio
         {
             return obj.Delete(table, id);
         }
+        public SqlDataReader ProfesContagiados(int cuatri, int progra)
+        {
+            return obj.ProfesContagiados(cuatri, progra);
+        }
+        public SqlDataReader AlumnosContagiados(int cuatri, int progra)
+        {
+            return obj.AlumnoContagiados(cuatri, progra);
+        }
+        public SqlDataReader AlumnoContagiadosGrupo(int cuatri, int progra, int grupo)
+        {
+            return obj.AlumnoContagiadosGrupo(cuatri, progra, grupo);
+        }
+        public SqlDataReader AlumnoSeguimiento(int cuatri, string matri)
+        {
+            return obj.AlumnoSeguimiento(cuatri, matri);
+        }
+        public SqlDataReader ProfesorContagios(int registro)
+        {
+            return obj.ProfesorContagiado(registro);
+        }
     }
 }

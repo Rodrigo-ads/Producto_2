@@ -72,7 +72,6 @@ namespace WebApplication1
                 DropDownList2.Items.Clear();
                 Label1.Text = "Seleccione una tabla!";
             }
-
         }
     }
 }

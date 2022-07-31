@@ -86,5 +86,151 @@ namespace ClassDAL
             conexion.Close();
             return respuesta;
         }
-    }   
+        public SqlDataReader ProfesContagiados(int cuatri, int educativo)
+        {
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlDataReader reader;
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.CommandText = @"select
+                Profesor.id,
+                Profesor.Ap_pat,
+                Profesor.Ap_Mat,
+                Profesor.Nombre,
+                Profesor.Celular,
+                Profesor.Correo,
+                Profesor.Categoria,
+                Profesor.Genero
+                from PositivoProfe
+                inner join Profesor on Profesor.id = PositivoProfe.id
+                inner join ProfeGRupo on ProfeGRupo.F_Profe = Profesor.id
+                inner join GrupoCuatrimestre on GrupoCuatrimestre.id = ProfeGRupo.id
+                inner join Cuatrimestre on Cuatrimestre.id = GrupoCuatrimestre.F_Cuatri
+                inner join ProgramaEducativo on ProgramaEducativo.id = GrupoCuatrimestre.F_ProgEd
+                where  Cuatrimestre.id = @cua  and ProgramaEducativo.id = @pro ";
+            com.Parameters.AddWithValue("@cua", cuatri);
+            com.Parameters.AddWithValue("@pro", educativo);
+            reader = com.ExecuteReader();
+            return reader;
+        }
+
+
+        public SqlDataReader AlumnoContagiados(int cuatri, int educativo)
+        {
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlDataReader reader;
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.CommandText = @"select
+                Alumno.id,
+                Alumno.Ap_pat,
+                Alumno.Ap_Mat,
+                Alumno.Nombre,
+                Alumno.Celular,
+                Alumno.Correo,
+                Alumno.Genero
+                from PositivoAlumno
+                inner join Alumno on Alumno.id = PositivoAlumno.id
+                inner join AlumnoGrupo on AlumnoGrupo.F_Alumn = Alumno.id
+                inner join GrupoCuatrimestre on GrupoCuatrimestre.id = AlumnoGrupo.id
+                inner join Cuatrimestre on Cuatrimestre.id = GrupoCuatrimestre.F_Cuatri
+                inner join ProgramaEducativo on ProgramaEducativo.id = GrupoCuatrimestre.F_ProgEd
+                where  Cuatrimestre.id = @cuatri  and ProgramaEducativo.id = @educativo";
+            com.Parameters.AddWithValue("@cuatri", cuatri);
+            com.Parameters.AddWithValue("@educativo", educativo);
+            reader = com.ExecuteReader();
+            return reader;
+        }
+        public SqlDataReader AlumnoContagiadosGrupo(int cuatri, int educativo, int grupo)
+        {
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlDataReader reader;
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.CommandText = @"select
+                Alumno.id,
+                Alumno.Ap_pat,
+                Alumno.Ap_Mat,
+                Alumno.Nombre,
+                Alumno.Celular,
+                Alumno.Correo,
+                Alumno.Genero
+                from PositivoAlumno
+                inner join Alumno on Alumno.id = PositivoAlumno.id
+                inner join AlumnoGrupo on AlumnoGrupo.F_Alumn = Alumno.id
+                inner join GrupoCuatrimestre on GrupoCuatrimestre.id = AlumnoGrupo.id
+                inner join Cuatrimestre on Cuatrimestre.id = GrupoCuatrimestre.F_Cuatri
+                inner join ProgramaEducativo on ProgramaEducativo.id = GrupoCuatrimestre.F_ProgEd
+                inner join Grupo on Grupo.id = GrupoCuatrimestre.F_Grupo
+                where  Cuatrimestre.id = 1  and ProgramaEducativo.id = 1 and Grupo.id = 1
+                ";
+            com.Parameters.AddWithValue("@cuatri", cuatri);
+            com.Parameters.AddWithValue("@educativo", educativo);
+            com.Parameters.AddWithValue("@grupo", grupo);
+            reader = com.ExecuteReader();
+            return reader;
+        }
+        public SqlDataReader AlumnoSeguimiento(int cuatri, string matri)
+        {
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlDataReader reader;
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.CommandText = @"select
+                Alumno.Ap_pat,
+                Alumno.Ap_mat,
+                Alumno.Nombre,
+                Alumno.Genero,
+                Alumno.Correo,
+                SeguimientoAL.Entrevista,
+                SeguimientoAL.Fecha,
+                SeguimientoAL.Reporte,
+                SeguimientoAL.Form_Comunica
+                from
+                SeguimientoAL
+                inner join PositivoAlumno on PositivoAlumno.id = SeguimientoAL.F_PositivoAL
+                inner join Alumno on Alumno.id = PositivoAlumno.F_Alumno
+                inner join AlumnoGrupo on AlumnoGrupo.F_Alumn = Alumno.id
+                inner join GrupoCuatrimestre on GrupoCuatrimestre.id = AlumnoGrupo.id
+                inner join Cuatrimestre on Cuatrimestre.id = GrupoCuatrimestre.F_Cuatri
+                where Cuatrimestre.id = @cuatri and Alumno.Matricula = @matri
+                ";
+            com.Parameters.AddWithValue("@cuatri", cuatri);
+            com.Parameters.AddWithValue("@matri", matri);
+            reader = com.ExecuteReader();
+            return reader;
+        }
+        public SqlDataReader ProfesorContagiado(int registro)
+        {
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlDataReader reader;
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.CommandText = @"
+                select
+                Profesor.Ap_pat,
+                Profesor.Ap_Mat,
+                Profesor.Nombre,
+                Profesor.Categoria,
+                Profesor.Celular,
+                Profesor.Genero,
+                PositivoProfe.Antecedentes,
+                PositivoProfe.Comprobacion,
+                PositivoProfe.FechaConfirmado,
+                PositivoProfe.NumContaio,
+                PositivoProfe.discpacidad
+                from PositivoProfe
+                inner join Profesor on Profesor.id = PositivoProfe.F_Profe
+                where Profesor.RegistroEmpleado = @registro
+                ";
+            com.Parameters.AddWithValue("@registro", registro);
+            reader = com.ExecuteReader();
+            return reader;
+        }
+    }
 }

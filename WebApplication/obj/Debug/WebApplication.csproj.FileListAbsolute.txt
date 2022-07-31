@@ -40,3 +40,45 @@ C:\Users\julio\Documents\Producto Memo\Producto_2\WebApplication\obj\Debug\WebAp
 C:\Users\julio\Documents\Producto Memo\Producto_2\WebApplication\obj\Debug\WebApplication.pdb
 C:\Users\julio\Documents\Producto Memo\Producto_2\WebApplication\bin\ClassEntidad.dll
 C:\Users\julio\Documents\Producto Memo\Producto_2\WebApplication\bin\ClassEntidad.pdb
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\obj\Debug\WebApplication.csproj.AssemblyReference.cache
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\obj\Debug\WebApplication.csproj.CoreCompileInputs.cache
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\obj\Debug\WebApplication.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\obj\Debug\WebApplication.pdb
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\WebApplication.dll.config
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\WebApplication.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\WebApplication.pdb
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\csc.exe
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\csc.exe.config
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\csc.rsp
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\csi.exe
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\csi.rsp
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\System.AppContext.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\vbc.exe
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\vbc.exe.config
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\vbc.rsp
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\VBCSCompiler.exe
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\ClassDAL.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\ClassEntidad.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\ClassNegocio.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\ClassEntidad.pdb
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\ClassDAL.pdb
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\ClassNegocio.pdb
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\WebApplication\obj\Debug\WebApplication.csproj.CopyComplete

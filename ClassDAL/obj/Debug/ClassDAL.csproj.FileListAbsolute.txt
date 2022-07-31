@@ -7,3 +7,12 @@ C:\Users\julio\Documents\Producto Memo\Producto_2\ClassDAL\obj\Debug\ClassDAL.pd
 C:\Users\julio\Documents\Producto Memo\Producto_2\ClassDAL\bin\Debug\ClassEntidad.dll
 C:\Users\julio\Documents\Producto Memo\Producto_2\ClassDAL\bin\Debug\ClassEntidad.pdb
 C:\Users\julio\Documents\Producto Memo\Producto_2\ClassDAL\obj\Debug\ClassDAL.csproj.CopyComplete
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\ClassDAL\bin\Debug\ClassDAL.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\ClassDAL\bin\Debug\ClassDAL.pdb
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\ClassDAL\bin\Debug\ClassEntidad.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\ClassDAL\bin\Debug\ClassEntidad.pdb
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\ClassDAL\obj\Debug\ClassDAL.csproj.AssemblyReference.cache
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\ClassDAL\obj\Debug\ClassDAL.csproj.CoreCompileInputs.cache
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\ClassDAL\obj\Debug\ClassDAL.csproj.CopyComplete
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\ClassDAL\obj\Debug\ClassDAL.dll
+C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\ClassDAL\obj\Debug\ClassDAL.pdb

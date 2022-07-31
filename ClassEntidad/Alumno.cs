@@ -15,9 +15,7 @@ namespace ClassEntidad
         public string Ap_mat { set; get; }
         public string Genero { set; get; }
         public string Correo { set; get; }
-        public string Celuar { set; get; }
+        public string Celular { set; get; }
         public int f_edoCivil { set; get; }
-        public int f_nivel { set; get; }
-
     }
 }

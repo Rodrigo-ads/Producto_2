@@ -48,5 +48,11 @@
     <Compile Include="ClassNego.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassEntidad\ClassEntidad.csproj">
+      <Project>{da94f443-f65f-4414-8953-00f415cc828b}</Project>
+      <Name>ClassEntidad</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -38,3 +38,5 @@ C:\Users\julio\Documents\Producto Memo\Producto_2\WebApplication\obj\Debug\WebAp
 C:\Users\julio\Documents\Producto Memo\Producto_2\WebApplication\obj\Debug\WebApplication.csproj.CopyComplete
 C:\Users\julio\Documents\Producto Memo\Producto_2\WebApplication\obj\Debug\WebApplication.dll
 C:\Users\julio\Documents\Producto Memo\Producto_2\WebApplication\obj\Debug\WebApplication.pdb
+C:\Users\julio\Documents\Producto Memo\Producto_2\WebApplication\bin\ClassEntidad.dll
+C:\Users\julio\Documents\Producto Memo\Producto_2\WebApplication\bin\ClassEntidad.pdb

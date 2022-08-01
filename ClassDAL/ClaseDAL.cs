@@ -473,8 +473,5 @@ namespace ClassDAL
             conexion.Close();
             return respuesta;
         }
-
-
-
     }
 }

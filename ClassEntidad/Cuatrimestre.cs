@@ -12,7 +12,7 @@ namespace ClassEntidad
         public string Periodo { set; get; } 
         public int Anio { set; get; }
         public string Inicio { set; get; }
-        public int fin { set; get; }
+        public string fin { set; get; }
         public string Extra { set; get; }
 
     }

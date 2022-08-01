@@ -16,5 +16,7 @@ namespace ClassEntidad
         public string Reporte { set; get; }
         public string Entrevista { set; get; }
         public string Extra { set; get; }
+        public string Imagen { set; get; }
+
     }
 }

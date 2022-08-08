@@ -10,3 +10,9 @@ C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\ClassEntidad\obj\Debug\C
 C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\ClassEntidad\obj\Debug\ClassEntidad.csproj.CoreCompileInputs.cache
 C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\ClassEntidad\obj\Debug\ClassEntidad.dll
 C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\ClassEntidad\obj\Debug\ClassEntidad.pdb
+C:\Users\Julio Andrei\Documents\Rodrigo\ClassEntidad\bin\Debug\ClassEntidad.dll
+C:\Users\Julio Andrei\Documents\Rodrigo\ClassEntidad\bin\Debug\ClassEntidad.pdb
+C:\Users\Julio Andrei\Documents\Rodrigo\ClassEntidad\obj\Debug\ClassEntidad.csproj.AssemblyReference.cache
+C:\Users\Julio Andrei\Documents\Rodrigo\ClassEntidad\obj\Debug\ClassEntidad.csproj.CoreCompileInputs.cache
+C:\Users\Julio Andrei\Documents\Rodrigo\ClassEntidad\obj\Debug\ClassEntidad.dll
+C:\Users\Julio Andrei\Documents\Rodrigo\ClassEntidad\obj\Debug\ClassEntidad.pdb

@@ -124,7 +124,7 @@ namespace ClassDAL
             SqlCommand com = new SqlCommand();
             com.Connection = conexion;
             com.CommandText = @"select
-                Alumno.id,
+                Alumno.id as 'ID_Alumno',
                 Alumno.Ap_pat,
                 Alumno.Ap_Mat,
                 Alumno.Nombre,
@@ -132,7 +132,7 @@ namespace ClassDAL
                 Alumno.Correo,
                 Alumno.Genero
                 from PositivoAlumno
-                inner join Alumno on Alumno.id = PositivoAlumno.id
+                inner join Alumno on Alumno.id = PositivoAlumno.F_Alumno
                 inner join AlumnoGrupo on AlumnoGrupo.F_Alumn = Alumno.id
                 inner join GrupoCuatrimestre on GrupoCuatrimestre.id = AlumnoGrupo.id
                 inner join Cuatrimestre on Cuatrimestre.id = GrupoCuatrimestre.F_Cuatri
@@ -159,7 +159,7 @@ namespace ClassDAL
                 Alumno.Correo,
                 Alumno.Genero
                 from PositivoAlumno
-                inner join Alumno on Alumno.id = PositivoAlumno.id
+                inner join Alumno on Alumno.id = PositivoAlumno.F_Alumno
                 inner join AlumnoGrupo on AlumnoGrupo.F_Alumn = Alumno.id
                 inner join GrupoCuatrimestre on GrupoCuatrimestre.id = AlumnoGrupo.id
                 inner join Cuatrimestre on Cuatrimestre.id = GrupoCuatrimestre.F_Cuatri
@@ -192,7 +192,7 @@ namespace ClassDAL
                 SeguimientoAL.Form_Comunica
                 from
                 SeguimientoAL
-                inner join PositivoAlumno on PositivoAlumno.id = SeguimientoAL.F_PositivoAL
+                inner join PositivoAlumno on PositivoAlumno.F_Alumno = SeguimientoAL.F_PositivoAL
                 inner join Alumno on Alumno.id = PositivoAlumno.F_Alumno
                 inner join AlumnoGrupo on AlumnoGrupo.F_Alumn = Alumno.id
                 inner join GrupoCuatrimestre on GrupoCuatrimestre.id = AlumnoGrupo.id
@@ -473,5 +473,8 @@ namespace ClassDAL
             conexion.Close();
             return respuesta;
         }
+
+
+
     }
 }

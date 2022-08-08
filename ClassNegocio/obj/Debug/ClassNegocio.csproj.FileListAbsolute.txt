@@ -20,3 +20,14 @@ C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\ClassNegocio\obj\Debug\C
 C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\ClassNegocio\obj\Debug\ClassNegocio.csproj.CopyComplete
 C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\ClassNegocio\obj\Debug\ClassNegocio.dll
 C:\Users\mcmen\OneDrive\Escritorio\trabajo\Producto_2_3\ClassNegocio\obj\Debug\ClassNegocio.pdb
+C:\Users\Julio Andrei\Documents\Rodrigo\ClassNegocio\bin\Debug\ClassNegocio.dll
+C:\Users\Julio Andrei\Documents\Rodrigo\ClassNegocio\bin\Debug\ClassNegocio.pdb
+C:\Users\Julio Andrei\Documents\Rodrigo\ClassNegocio\bin\Debug\ClassDAL.dll
+C:\Users\Julio Andrei\Documents\Rodrigo\ClassNegocio\bin\Debug\ClassEntidad.dll
+C:\Users\Julio Andrei\Documents\Rodrigo\ClassNegocio\bin\Debug\ClassEntidad.pdb
+C:\Users\Julio Andrei\Documents\Rodrigo\ClassNegocio\bin\Debug\ClassDAL.pdb
+C:\Users\Julio Andrei\Documents\Rodrigo\ClassNegocio\obj\Debug\ClassNegocio.csproj.AssemblyReference.cache
+C:\Users\Julio Andrei\Documents\Rodrigo\ClassNegocio\obj\Debug\ClassNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Julio Andrei\Documents\Rodrigo\ClassNegocio\obj\Debug\ClassNegocio.csproj.CopyComplete
+C:\Users\Julio Andrei\Documents\Rodrigo\ClassNegocio\obj\Debug\ClassNegocio.dll
+C:\Users\Julio Andrei\Documents\Rodrigo\ClassNegocio\obj\Debug\ClassNegocio.pdb

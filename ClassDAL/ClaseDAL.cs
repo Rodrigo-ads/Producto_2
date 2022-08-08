@@ -493,5 +493,49 @@ namespace ClassDAL
             return respuesta;
         }
 
+        public string ActualizarProfe(Profesor profesor)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.Parameters.AddWithValue("@RegistroE", profesor.RegistroEmpleado);
+            com.Parameters.AddWithValue("@Nombre", profesor.Nombre);
+            com.Parameters.AddWithValue("@Appat", profesor.Ap_pat);
+            com.Parameters.AddWithValue("@Apmat", profesor.Ap_Mat);
+            com.Parameters.AddWithValue("@Genero", profesor.Genero);
+            com.Parameters.AddWithValue("@Categoria", profesor.Categoria);
+            com.Parameters.AddWithValue("@Correo", profesor.Correo);
+            com.Parameters.AddWithValue("@Celular", profesor.Celular);
+            com.Parameters.AddWithValue("@F_EdoCivil", profesor.F_EdoCivil);
+            com.CommandText = "update Profesor set RegistroEmpleado =@RegistroE , Nombre = @Nombre, Ap_pat = @Appat, " +
+                "Ap_Mat = @Apmat, Genero = @Genero, Categoria = @Categoria, Correo = @Correo, Celular = @Celular, F_EdoCivil = @F_EdoCivil where RegistroEmpleado = @RegistroE;";
+
+            com.ExecuteNonQuery();
+            respuesta = "Se Actualizo al profesor";
+            conexion.Close();
+            return respuesta;
+        }
+
+        public string ActualizarAlumnoGrupo(AlumnoGrupo alumnoGrupo)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.Parameters.AddWithValue("@F_Alumn", alumnoGrupo.f_alumn);
+            com.Parameters.AddWithValue("@F_GruCuat", alumnoGrupo.f_grucuat);
+            com.Parameters.AddWithValue("@Extra", alumnoGrupo.extra);
+            com.Parameters.AddWithValue("@Extra2", alumnoGrupo.extra2);
+            com.CommandText = "update AlumnoGrupo set F_Alumn=@F_Alumn, F_GruCuat=@F_GruCuat, Extra=@Extra, Extra2=@Extra2 where F_Alumn=@F_Alumn;";
+            com.ExecuteNonQuery();
+            respuesta = "Se Actualizo AlumnoGrupo";
+            conexion.Close();
+            return respuesta;
+        }
+
+
     }
 }

@@ -112,6 +112,15 @@ namespace ClassNegocio
         {
             return obj.ActualizaCuatrimestre(cuatri);
         }
+
+        public string ActualizarProfesor(Profesor profesor)
+        {
+            return obj.ActualizarProfe(profesor);
+        }
+        public string ActualizarAlumnoGrupo(AlumnoGrupo alumnoGrupo)
+        {
+            return obj.ActualizarAlumnoGrupo(alumnoGrupo);
+        }
     }
 
 }

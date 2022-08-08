@@ -62,6 +62,68 @@
                 </div>
                 <asp:Button ID="btnCuatrimestre" runat="server" CssClass="btn btn-primary" Text="Actualizar Cuatrimestre" OnClick="btnCuatrimestre_Click" />
             </div>
+
+             <div class="mb-5">
+                <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
+                <h3><small class="text-muted ">Actualizar Profesor</small></h3>
+                <div class="input-group mb-3 mt-3">
+                    <span class="input-group-text" id="basic-addon8">Registro</span>
+                   <asp:DropDownList ID="DropDownProfesorID" AutoPostBack="true" OnSelectedIndexChanged="DropDownProfesorID_SelectedIndexChanged" runat="server"></asp:DropDownList>
+                </div>
+                <div class="input-group mb-3 mt-3">
+                    <span class="input-group-text" id="basic-addon9">Nombre</span>
+                    <asp:TextBox ID="TextBoxProfesorNombre" class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <div class="input-group mb-3 mt-3">
+                    <span class="input-group-text" id="basic-addon10">Apellido Paterno</span>
+                    <asp:TextBox ID="TextBoxProfesorPaterno" class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <div class="input-group mb-3 mt-3">
+                    <span class="input-group-text" id="basic-addon11">Apellido Materno</span>
+                    <asp:TextBox ID="TextBoxProfesorMaterno" class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <div class="input-group mb-3 mt-3">
+                    <span class="input-group-text" id="basic-addon12">Genero</span>
+                    <asp:TextBox ID="TextBoxProfesorGenero" class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <div class="input-group mb-3 mt-3">
+                    <span class="input-group-text" id="basic-addon13">Correo</span>
+                    <asp:TextBox ID="TextBoxProfesorCorreo" class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <div class="input-group mb-3 mt-3">
+                    <span class="input-group-text" id="basic-addon14">Celular</span>
+                    <asp:TextBox ID="TextBoxProfesorCelular" class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <div class="input-group mb-3 mt-3">
+                    <span class="input-group-text" id="basic-addon15">Categoria</span>
+                    <asp:TextBox ID="TextBoxProfesorCategoria" class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <asp:DropDownList ID="DropDownListProfeCivil" class="form-control" runat="server"></asp:DropDownList>
+                <asp:Button ID="ActualizarPro" runat="server" CssClass="btn btn-primary" Text="Actualizar Profesor" OnClick="ActualizarPro_Click" />
+            </div>
+
+             <div class="mb-5">
+                <asp:Label ID="Label6" runat="server" Text=""></asp:Label>
+                <h3><small class="text-muted ">Crear AlumnoGrupo</small></h3>
+                <div class="input-group mb-3 mt-3">
+                    <span class="input-group-text" id="basic-addon36">Alumno</span>
+                    <asp:DropDownList ID="DropDownListAlumnoGrupo_Alumno" OnSelectedIndexChanged="DropDownListAlumnoGrupo_Alumno_SelectedIndexChanged" AutoPostBack="true" class="form-control" runat="server"></asp:DropDownList>
+                </div>
+                <div class="input-group mb-3 mt-3">
+                    <span class="input-group-text" id="basic-addon37">GrupoCuatri</span>
+                    <asp:TextBox ID="TextBoxGrupoCuatri" class="form-control" runat="server"></asp:TextBox>
+
+                </div>
+                <div class="input-group mb-3 mt-3">
+                    <span class="input-group-text" id="basic-addon38">Extra 1</span>
+                    <asp:TextBox ID="TextBoxAlumnoGrupo_Extra1" class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <div class="input-group mb-3 mt-3">
+                    <span class="input-group-text" id="basic-addon39">Extra 2</span>
+                    <asp:TextBox ID="TextBoxAlumnoGrupo_Extra2" class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <asp:Button ID="Button6" runat="server" CssClass="btn btn-primary" Text="Actualizar GrupoAlumno" OnClick="Button6_Click" />
+            </div>
         </div>
     </form>
 </body>

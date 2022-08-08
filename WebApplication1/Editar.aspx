@@ -50,17 +50,17 @@
                 </div>
                 <div class="input-group mb-3 mt-3">
                     <span class="input-group-text" id="basic-addon3">Inicio</span>
-                    <asp:TextBox ID="TextBoxCuatrimestreInicio" class="form-control" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxCuatrimestreInicio" type="Date" class="form-control" runat="server"></asp:TextBox>
                 </div>
                 <div class="input-group mb-3 mt-3">
                     <span class="input-group-text" id="basic-addon4">Fin</span>
-                    <asp:TextBox ID="TextBoxCuatrimestreFin" class="form-control" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxCuatrimestreFin" type="Date" class="form-control" runat="server"></asp:TextBox>
                 </div>
                 <div class="input-group mb-3 mt-3">
                     <span class="input-group-text" id="basic-addon5">Extra</span>
                     <asp:TextBox ID="TextBoxCuatrimestreExtra" class="form-control" runat="server"></asp:TextBox>
                 </div>
-                <asp:Button ID="btnCuatrimestre" runat="server" CssClass="btn btn-primary" Text="Actualizar Cuatrimestre" />
+                <asp:Button ID="btnCuatrimestre" runat="server" CssClass="btn btn-primary" Text="Actualizar Cuatrimestre" OnClick="btnCuatrimestre_Click" />
             </div>
         </div>
     </form>

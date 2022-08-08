@@ -474,7 +474,24 @@ namespace ClassDAL
             return respuesta;
         }
 
-
+        public string ActualizaCuatrimestre(Cuatrimestre cuatrimestre)
+        {
+            string respuesta = "";
+            SqlConnection conexion = new SqlConnection(Cadena);
+            conexion.Open();
+            SqlCommand com = new SqlCommand();
+            com.Connection = conexion;
+            com.Parameters.AddWithValue("@Id", cuatrimestre.Id_Cuatrimestre);
+            com.Parameters.AddWithValue("@Anio", cuatrimestre.Anio);
+            com.Parameters.AddWithValue("@Inicio", cuatrimestre.Inicio);
+            com.Parameters.AddWithValue("@Fin", cuatrimestre.fin);
+            com.Parameters.AddWithValue("@Extra", cuatrimestre.Extra);
+            com.CommandText = "update Cuatrimestre set Anio = @Anio, Inicio = @Inicio, Fin = @Fin, Extra =  @Extra where id = @Id";
+            com.ExecuteNonQuery();
+            respuesta = "Se actualizó el cuatrimestre";
+            conexion.Close();
+            return respuesta;
+        }
 
     }
 }

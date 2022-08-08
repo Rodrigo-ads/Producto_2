@@ -107,6 +107,11 @@ namespace ClassNegocio
             return obj.InsertaPositivoAlumno(positivoAlumno);
 
         }
+
+        public string actualizarCuatrimestre(Cuatrimestre cuatri)
+        {
+            return obj.ActualizaCuatrimestre(cuatri);
+        }
     }
 
 }
